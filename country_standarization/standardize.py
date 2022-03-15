@@ -12,8 +12,7 @@ def correct_names(df: Union[pd.Series, pd.DataFrame], column: str, pattern_map: 
                   new_colum_name: str = None) -> Union[pd.DataFrame, pd.Series]:
     """
     Standardize names of countries according to ISO 3166.
-    :param standardize_names:
-    :param pattern_map: list of tuple maping between names and regex
+    :param pattern_map: list of tuple mapping between names and regex
     :param df: dataframe with countries
     :param column: column name where countries are
     :param new_colum_name: If you want to give a new name to sio country names.
@@ -56,6 +55,7 @@ def map_names(df: Union[pd.Series, pd.DataFrame], column_to_match: str, on: str,
     pd.DataFrame, pd.Series]:
     """
     Returns extrac columns with information on the iso codes for countries.
+    :param standardize_names:
     :param df: Dataframe to change match
     :param column_to_match: name of the on the df to match
     :param on: name of iso options to match ['name', 'alpha-2', 'alpha-3', 'country-code', 'iso_3166-2']

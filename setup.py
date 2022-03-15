@@ -1,4 +1,11 @@
 from setuptools import setup, find_packages
+from pathlib import Path
+
+# read the contents of your README file
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
+
 
 setup(
     name='country_standarization',
@@ -8,5 +15,7 @@ setup(
     license='MIT',
     author='Xavier-Andoni Tibau',
     author_email='xavitibau@gmail.com',
-    description='Standarize names of countries according to  ISO 3166'
+    long_description=long_description,
+    long_description_content_type='text/markdown',
 )
+
